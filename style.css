@@ -1,0 +1,8 @@
+.pessoasReg{
+    display: none;
+}
+
+.pessoasReg.on{
+    display: block;
+}
+

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Comparação de idade (Registre as pessoas)</h1>
+
+    <form id="registro">
+        
+        <label>Digite o nome</label>
+        <input type="text" name="nome" id="nome" >
+
+        <label>Digite a idade</label>
+        <input type="number" name="idade" id="idade">
+            
+
+        <button type="submit">Registrar</button>
+    </form>
+
+    <div  class="pessoasReg">
+        <h2>Pessoas Registradas</h2>
+
+        <table id="listaPessoas">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Idade</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+
+    <p id="pessoaMaior" ></p>
+
+    <script src="scritp.js"></script>
+</body>
+</html>
