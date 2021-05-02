@@ -7,19 +7,25 @@ let tabela = document.getElementById("listaPessoas")
 form.addEventListener("submit", function (evento) {
     evento.preventDefault()
 
-    pessoasReg.classList.add("on")
-
     let dados = new FormData(form)
     let registro = registrarPessoa(dados)
-   
-    pessoas.push(registro)
-    alert("Pessoa registrada!")
-    console.log(pessoas)
-    limpiar()
-    
-    tabela.innerHTML += `<tbody><td>${registro.nome}</td><td>${registro.idade}</td></tbody>`;
 
-    PessoaMaior(pessoas)
+    let regNome = registro.nome
+    let regIdade  =registro.idade
+
+    if(regNome =="" || regIdade==""){
+        alert("Debe preencher todos los canpos")
+    }else{
+        pessoasReg.classList.add("on")
+        pessoas.push(registro)
+        alert("Pessoa registrada!")
+        console.log(pessoas)
+        limpiar()
+    
+        tabela.innerHTML += `<tbody><td>${registro.nome}</td><td>${registro.idade}</td></tbody>`;
+
+        PessoaMaior(pessoas)
+    }
 
 })
 
@@ -58,5 +64,5 @@ function ordenarPessoas(pessoas){
 
 function PessoaMaior(pessoas){
     ordenarPessoas(pessoas)
-    document.getElementById('pessoaMaior').innerHTML = (`A pessoa com maior idade é ${pessoas[0].nome} e tem ${pessoas[0].idade} anos`);
+    document.getElementById('pessoaMaior').innerHTML = (`A pessoa com maior idade é <strong>${pessoas[0].nome}</strong> e tem <strong>${pessoas[0].idade}</strong> anos`);
 }

@@ -5,38 +5,61 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio4-Aula10</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700;800&display=swap" rel="stylesheet">   
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <h1>Comparação de idade (Registre as pessoas)</h1>
+    <div class="container">
 
-    <form id="registro">
-        
-        <label>Digite o nome</label>
-        <input type="text" name="nome" id="nome" >
+        <h1>Comparação de idade (Registre as pessoas)</h1>
 
-        <label>Digite a idade</label>
-        <input type="number" name="idade" id="idade">
-            
+        <div class="container-form">
 
-        <button type="submit">Registrar</button>
-    </form>
+            <form id="registro" class="Registro">
 
-    <div  class="pessoasReg">
-        <h2>Pessoas Registradas</h2>
+                <div class="item">
+                    <label>Digite o nome</label>
+                    <input type="text" name="nome" id="nome">
+                </div>
 
-        <table id="listaPessoas">
-            <thead>
-                <tr>
-                    <th>Nome</th>
-                    <th>Idade</th>
-                </tr>
-            </thead>
-        </table>
+                <div class="item">
+                    <label>Digite a idade</label>
+                    <input type="number" name="idade" id="idade">
+                </div> 
+
+                <div class="button">
+                    <button type="submit">Registrar</button>
+                </div>
+
+            </form>
+
+            <div class="icon"></div>
+
+        </div>
+
+        <div  class="pessoasReg">
+            <h2>Pessoas Registradas</h2>
+
+            <table id="listaPessoas">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Idade</th>
+                    </tr>
+                </thead>
+            </table>
+
+            <p id="pessoaMaior"></p>
+        </div>
+
+        <footer>
+            <p>Maria Lares | Maferlape</p>
+        </footer>
+
     </div>
-
-    <p id="pessoaMaior" ></p>
+    
 
     <script src="script.js"></script>
 </body>
